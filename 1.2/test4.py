@@ -17,6 +17,8 @@
 
 import sys
 import numpy as np
-matrix = np.loadtxt(sys.stdin, delimiter=" ")
+matrix = np.loadtxt(sys.stdin)
+# matrix = np.loadtxt(sys.stdin, delimiter=" ")
 
 print(str(int((matrix==0).all(axis=0).sum())))
+# print("{}".format((matrix==0).all(axis=0).sum()))
