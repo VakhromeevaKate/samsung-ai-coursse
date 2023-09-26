@@ -17,8 +17,8 @@
 
 import sys
 import numpy as np
-matrix = np.loadtxt(sys.stdin, delimiter=" ")
-mask = (matrix==0).all(axis=0).sum() #returns numpy.int64, but we need simple integer
-count = int(mask.item())
-#print(type(count))
-print(str(count))
+matrix = np.loadtxt(sys.stdin)
+# matrix = np.loadtxt(sys.stdin, delimiter=" ")
+
+print(str(int((matrix==0).all(axis=0).sum())))
+# print("{}".format((matrix==0).all(axis=0).sum()))
