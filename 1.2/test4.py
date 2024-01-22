@@ -17,6 +17,11 @@
 
 import sys
 import numpy as np
-matrix = np.loadtxt(sys.stdin)
+
+# matrix = np.loadtxt(sys.stdin) - тут ошибка с типом!
+
+matrix = [[float(i) for i in line.split()] for line in sys.stdin]
+matrix = np.array(matrix)
+
 
 print((matrix==0).all(axis=0).sum())
